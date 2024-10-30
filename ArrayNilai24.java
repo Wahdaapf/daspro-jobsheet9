@@ -7,12 +7,18 @@ public class ArrayNilai24 {
         int nilaiAkhir[] = new int[10];
 
         for(int i = 0; i < nilaiAkhir.length; i++){
-            System.out.print("Masukkan Nilai Akhir Ke-" + (i+1) + " : ");
+            System.out.print("Masukkan Nilai Akhir Mahasiswa Ke-" + (i+1) + " : ");
             nilaiAkhir[i] = input.nextInt();
         }
 
         for(int i = 0; i < nilaiAkhir.length; i++){
-            System.out.println("Nilai akhir Ke-" + (i+1) + " : " + nilaiAkhir[i]);
+            if(nilaiAkhir[i] > 70) {
+                System.out.println("Mahasiswa Ke-" + (i+1) + " Lulus!");
+            } else {
+                System.out.println("Mahasiswa Ke-" + (i+1) + " Tidak Lulus!");
+            }
         }
+
+        input.close();
     }
 }
